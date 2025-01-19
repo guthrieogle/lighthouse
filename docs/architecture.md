@@ -37,12 +37,6 @@ driver.defaultSession.on('Security.securityStateChanged', state => { /* ... */ }
 driver.defaultSession.sendCommand('Security.enable');
 ```
 
-* _Debugging the protocol_: Read [Better debugging of the Protocol](https://github.com/GoogleChrome/lighthouse/issues/184).
-
-## Understanding a Trace
-
-`core/lib/tracehouse/trace-processor.js` provides the core transformation of a trace into more meaningful objects. Each raw trace event has a monotonically increasing timestamp in microseconds, a thread ID, a process ID, a duration in microseconds (potentially), and other applicable metadata properties such as the event type, the task name, the frame, etc. [Learn more about trace events](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview).
-
 ### Example Trace Event
 ```js
 {
